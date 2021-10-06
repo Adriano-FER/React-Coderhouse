@@ -15,3 +15,21 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+//clonar con spread operator,
+
+const perfil = {
+  nombre:"Julio",
+  apellido:"Profe"
+
+};
+
+const perfilconEdad = {
+  ...perfil,
+  edad:25,
+  nacionalidad:"Hemaniano"
+}
+console.log(perfilconEdad)
+
+//perfilconEdad === perfil false, no son lo mismo. Los objetos aunque lo clonemos nunca son lo mismo 
+//ignora lo de la edad, esto tampoco da igual si los comparamos apenas copiados.
