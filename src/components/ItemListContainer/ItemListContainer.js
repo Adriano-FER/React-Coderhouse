@@ -16,7 +16,7 @@ export default function ItemListContainer() {
   return (
     <div onClick={handleClick} className="App">
       <Hello counter={counter} />
-      <p class="whitetxt">Welcome to my STORE</p>
+      <p className="whitetxt">Welcome to my STORE</p>
     </div>
   );
 }
