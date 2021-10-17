@@ -2,15 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Navbar from "./components/Navbar/Navbar"
+
 import reportWebVitals from './reportWebVitals';
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
-    <ItemListContainer />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -20,20 +19,3 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-//clonar con spread operator,
-
-const perfil = {
-  nombre:"Julio",
-  apellido:"Profe"
-
-};
-
-const perfilconEdad = {
-  ...perfil,
-  edad:25,
-  nacionalidad:"Hemaniano"
-}
-console.log(perfilconEdad)
-
-//perfilconEdad === perfil false, no son lo mismo. Los objetos aunque lo clonemos nunca son lo mismo 
-//ignora lo de la edad, esto tampoco da igual si los comparamos apenas copiados.
