@@ -1,22 +1,21 @@
 import { useState } from 'react';
 import React from 'react';
 import './style.css';
+import ItemCount from "./ItemCount.jsx"
 
-const Hello = ({ counter }) => {
-  return <h1>Hello {counter}!</h1>;
-};
+
 
 export default function ItemListContainer() {
-  const [counter, setCounter] = useState(20);
 
-  const handleClick = () => {
-    setCounter(counter + 10);
-  };
+    
+      
 
   return (
-    <div onClick={handleClick} className="App">
-      <Hello counter={counter} />
+    <div className="App">
+     
+      <ItemCount stock="5" initial="1" onAdd="1" nombre="Bicicleta" />
       <p className="whitetxt">Welcome to my STORE</p>
     </div>
   );
 }
+
