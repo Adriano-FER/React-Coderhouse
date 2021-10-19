@@ -10,16 +10,23 @@ export default function ItemCount({stock, initial, onAdd, nombre}){
         setStock(Number(Stock) - Number(onAdd));
         setBuy(Number(Final) + Number(onAdd))
       }
-
+ 
       }
-      
+    function deleteFromStock(){
+      if(Final !== 0){
+        setStock(Number(Stock) + Number(onAdd));
+        setBuy(Number(Final) - Number(onAdd))
+      }
+
+    }
    
     return (
       <div>
       <h5>{nombre}</h5>
      <p> stock: = {Stock} </p>
      <p> MyCart = {Final} </p>
-     <button onClick={buyFromStock}>Comprar</button>
+     <button onClick={buyFromStock}>Agregar</button>
+     <button onClick={deleteFromStock}>Restar</button>
       </div>
       )
     }
