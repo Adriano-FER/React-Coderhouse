@@ -1,5 +1,13 @@
+
 body{
-    background-color: darkslategrey;
+    background-image: url("./wpaper.png");
+    
+        height: 100VH; 
+
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 }
 .whitetxt{
     color: white;
