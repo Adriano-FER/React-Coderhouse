@@ -27,7 +27,7 @@ export default function ItemCount({stock, initial, onAdd, nombre}){
      <p> MyCart = {final} </p>
      <button onClick={buyFromStock}>Agregar</button>
      <button onClick={deleteFromStock}>Restar</button>
-     <button onClick>agregar al carrito</button>
+     <button >agregar al carrito</button>
       </div>
       )
     }
