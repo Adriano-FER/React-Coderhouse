@@ -1,35 +1,26 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 
-export default function Itemlist({url}){
-   const [visibleElement, setVisibleElement] = useState([])
-    const getItems = async () => {
-        try {let rawresponse = await fetch(url);
-            rawresponse = await rawresponse.json()
-             setVisibleElement(rawresponse.results) 
-            console.log(visibleElement)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-    useEffect(() => {
+import Item from '../Item/Item.js'
 
-         
-            getItems();
-        
-      }, []);
+
+export default function ItemList({items}) {
+
+
+  console.log(items)
 
 
 
-    return (
-        <div className="whitetxt">
-            <ul> 
-            { visibleElement.map((character,index) => 
-            <li key={index}>He is {character.name}, is {character.height}cm tall and was born in {character.birth_year}</li>)}
-           
-            </ul>
+  return (
+    <div className="App">
+        <p>funciono</p>
+        <div className="container">
+            <div className="row">  
+                
+        {items.map((item , index) => ( <Item product={item} key={index}/>))}
+             </div>
         </div>
-        )
+    </div>
+  );
+}
 
-
-    }   
