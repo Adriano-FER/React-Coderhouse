@@ -1,0 +1,17 @@
+{
+    "Products":[
+    {"id":0,
+    "alias":"Joystick",
+    "name":"Noga Net",
+    "price":100,
+    "stock":100,
+    "img":""},
+    {"id":1,
+        "alias":"Keyboard",
+        "name":"Razer",
+        "price":1000,
+        "stock":10,
+        "img":""}
+    
+    ]
+}

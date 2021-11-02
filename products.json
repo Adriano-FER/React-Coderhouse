@@ -1,17 +1,45 @@
 {
-    "Products":[
-    {"id":0,
-    "alias":"Joystick",
-    "name":"Noga Net",
-    "price":100,
-    "stock":100,
-    "img":""},
-    {"id":1,
-        "alias":"Keyboard",
-        "name":"Razer",
-        "price":1000,
-        "stock":10,
-        "img":""}
-    
+    "Products": [{
+            "id": 0,
+            "alias": "Joystick",
+            "name": "Noga Net",
+            "price": 100,
+            "stock": 100,
+            "img": "/extras"
+        },
+        {
+            "id": 1,
+            "alias": "Keyboard",
+            "name": "Razer",
+            "price": 1000,
+            "stock": 10,
+            "img": ""
+        },
+        {
+            "id": 2,
+            "alias": "Screen",
+            "name": "Samsung",
+            "price": 2000,
+            "stock": 20,
+            "img": ""
+        },
+        {
+            "id": 3,
+            "alias": "Mouse",
+            "name": "Genius",
+            "price": 10,
+            "stock": 5,
+            "img": ""
+        },
+        {
+            "id": 4,
+            "alias": "Headphones",
+            "name": "Corsair",
+            "price": 2000,
+            "stock": 550,
+            "img": ""
+        }
+
+
     ]
 }

@@ -1,0 +1,11 @@
+.card-img-top{
+    max-height: 60vh;
+    max-width: 60vh;
+    
+}
+.card{
+    align-items: center;
+    background-color: transparent;
+    opacity: 90%;
+    color: thistle;
+}
