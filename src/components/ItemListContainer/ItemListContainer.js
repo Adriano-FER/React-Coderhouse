@@ -5,10 +5,12 @@ import ItemList from '../ItemList/ItemList.js';
 import ItemCount from '../ItemCount/ItemCount.jsx';
 import { useEffect } from 'react';
 
+
 export default function ItemListContainer({title}) {
   const [products, setproducts] = useState([])
-  const getItems = async () => {
-      try {let rawresponse = await fetch("https://rickandmortyapi.com/api/character/");
+
+  const getItems = async () => {  
+      try {let rawresponse = await fetch(`https://rickandmortyapi.com/api/character/`);
           rawresponse = await rawresponse.json()
           await setproducts(rawresponse.results) 
            

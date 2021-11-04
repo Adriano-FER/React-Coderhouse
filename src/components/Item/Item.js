@@ -1,12 +1,13 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
 
+import ItemCount from '../ItemCount/ItemCount.jsx';
+import { Link } from 'react-router-dom';
 
-
-export default function Item({product}){
-    console.log(product)
+export default function Item({product, id}){
+    
 const {image, name, species, status} = product
-
+   function redirectItem(e){
+    
+    }
      return (
 
                 
@@ -18,9 +19,11 @@ const {image, name, species, status} = product
                      <h5 className="card-title">{name}</h5>
                  
                  <p className="card-text">{species}cm tall and was born in {status}</p>
-                 <button>Detalles</button>
+                 <button><Link to={`/detail/${id}`}>Detalles</Link></button>
                     </div>
+                    <ItemCount stock="5" initial="0" onAdd="1" />
                 </div>
+
                 </div> 
                 
               

@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
+
 import "./ItemDetail.css"
 
 
@@ -20,7 +19,7 @@ const {image, name, species, status, location, origin} = details
                  <p className="card-text">{species}cm tall and was born in {status}</p>
                  <span>He is in {location ? location.name: " "} <br/></span>
                  <span>He from {origin ? origin.name: " "} <br/></span>
-                 <button>Detalles</button>
+                 <button>Buy</button>
                     </div>
                 </div>
                 </div> 

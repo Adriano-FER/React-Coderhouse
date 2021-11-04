@@ -17,7 +17,7 @@ export default function ItemList({items}) {
         <div className="container">
             <div className="row">  
                 
-        {items.map((item , index) => ( <Item product={item} key={index}/>))}
+        {items.map((item , index) => ( <Item id={item.id} product={item} key={index}/>))}
              </div>
         </div>
     </div>
