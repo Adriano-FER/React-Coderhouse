@@ -1,22 +1,28 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { useParams } from 'react-router-dom';
 import ItemDetails from "../ItemDetail/ItemDetail";
 
-export default function ItemDetailContainer() {
+export default function ItemDetailContainer({}) {
   const [products, setproducts] = useState([]);
+  const itemID = useParams()
  
   const getItems = async () => {
+
+
     try {
+      
       let rawresponse = await fetch(
-        "https://rickandmortyapi.com/api/character/"
+        `https://rickandmortyapi.com/api/character/${itemID.id}`
       );
       rawresponse = await rawresponse.json();
-      await setproducts(rawresponse.results[0]);
+      debugger
+      await setproducts(rawresponse);
     
     } catch (error) {
       console.log(error);
     }
-    
+ 
   };
   useEffect(() => {
     getItems();
