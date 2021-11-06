@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+
+
 
 import Item from '../Item/Item.js'
 
@@ -7,7 +7,7 @@ import Item from '../Item/Item.js'
 export default function ItemList({items}) {
 
 
-  console.log(items)
+
 
 
 
