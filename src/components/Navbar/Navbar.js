@@ -3,20 +3,21 @@ import logo from "./logo.png"
 import CartWidget from "./CartWidget"
 import { NavLink } from 'react-router-dom';
 
+
 const Navbar = () => {
     return (
-        <navbar>
+        <div>
             <ul className="topnav">
-             <li className="item"><NavLink to="/home">Home</NavLink></li>
+             <li className="item"><NavLink to="/">Home</NavLink></li>
             <li className="item"><NavLink to="/products">Products</NavLink></li>
             <li className="item"><NavLink to="/detail">Item Detail</NavLink></li>
              <li className="item"><NavLink to="/cart">Cart</NavLink></li>
             <li className="item"><NavLink to="/about">About</NavLink></li>
               <li className="item"><NavLink to="/contact">Contact</NavLink></li>
              <li className="brand">GamerForce <img className="logo" src={logo} alt="Logo"></img></li>
-            <li > <CartWidget /></li>
+            <li className="brand"> <CartWidget /></li>
         </ul>
-        </navbar>
+        </div>
     )
 
 

@@ -1,3 +1,11 @@
+.topnav{
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+}
+
 ul.topnav {
     list-style-type: none;
     margin: 0;
@@ -30,6 +38,9 @@ ul.topnav {
   .brand{float:right}
 
   .logo{
+    
     max-width: 6vh;
     max-height: 6vh;
   }
+
+  

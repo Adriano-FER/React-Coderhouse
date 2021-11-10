@@ -3,25 +3,23 @@ import { useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import ItemDetails from "../ItemDetail/ItemDetail";
 
+
 export default function ItemDetailContainer({}) {
   const [products, setproducts] = useState([]);
-  const itemID = useParams()
+  const ID = useParams()
  
   const getItems = async () => {
 
-
-    try {
-      
-      let rawresponse = await fetch(
-        `https://rickandmortyapi.com/api/character/${itemID.id}`
-      );
-      rawresponse = await rawresponse.json();
-      debugger
-      await setproducts(rawresponse);
     
+    try {let rawresponse = await fetch(`/products.json`);
+    rawresponse = await rawresponse.json()
+        await setproducts(rawresponse.list) 
+   
+        console.log(products)
     } catch (error) {
-      console.log(error);
-    }
+        console.log(error)
+}
+  
  
   };
   useEffect(() => {
@@ -30,13 +28,13 @@ export default function ItemDetailContainer({}) {
   }, []);
   
   return (
-    <div className="col-12">
+    <div className="col-12 bg-3">
             <div className="App">
         <p>funciono</p>
         <div className="container">
             <div className="row">  
                 
-        <ItemDetails details={products} key={0}/>
+        {{products} ? <ItemDetails details={products} number={ID} key={0}/>: "ESTOY CARGANDO"} 
              </div>
         </div>
     </div>

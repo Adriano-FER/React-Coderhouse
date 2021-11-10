@@ -1,0 +1,24 @@
+.wt{
+    color: white;
+}
+.bg-b{
+    background-image: url("./abstract.jpg");
+    
+    height: 100VH; 
+background-color: black;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+.bg-c{
+    background-image: url("./computer.jpg");
+    
+    height: 100VH; 
+background-color: black;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+

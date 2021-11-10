@@ -1,9 +1,9 @@
 
-body{
+.bg-a{
     background-image: url("./wpaper.png");
     
         height: 100VH; 
-
+    background-color: black;
 
         background-position: center;
         background-repeat: no-repeat;

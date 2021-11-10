@@ -5,7 +5,7 @@
             "name": "Noga Net",
             "price": 100,
             "stock": 100,
-            "img": "./FakeApi/Extras/joystick.jpg",
+            "img": "./Extras/joystick.jpg",
             "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum iaculis aliquet. Maecenas tortor turpis, mollis at vestibulum ut, fermentum ac metus. Proin vel mi non lacus iaculis condimentum in at quam. Praesent diam dui, viverra sit amet interdum non, elementum sit amet arcu. Integer elementum blandit odio nec tincidunt. Cras consectetur feugiat ipsum id mollis. Phasellus id dolor turpis. Quisque condimentum lacus vitae dolor lobortis, vel pulvinar velit varius. "
         },
         {
@@ -14,7 +14,7 @@
             "name": "Razer",
             "price": 1000,
             "stock": 10,
-            "img": "./FakeApi/Extras/keyboard.jpg",
+            "img": "./Extras/keyboard.jpg",
             "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum iaculis aliquet. Maecenas tortor turpis, mollis at vestibulum ut, fermentum ac metus. Proin vel mi non lacus iaculis condimentum in at quam. Praesent diam dui, viverra sit amet interdum non, elementum sit amet arcu. Integer elementum blandit odio nec tincidunt. Cras consectetur feugiat ipsum id mollis. Phasellus id dolor turpis. Quisque condimentum lacus vitae dolor lobortis, vel pulvinar velit varius. "
         },
         {
@@ -23,7 +23,7 @@
             "name": "Samsung",
             "price": 2000,
             "stock": 20,
-            "img": "./FakeApi/Extras/screen.png",
+            "img": "./Extras/screen.png",
             "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum iaculis aliquet. Maecenas tortor turpis, mollis at vestibulum ut, fermentum ac metus. Proin vel mi non lacus iaculis condimentum in at quam. Praesent diam dui, viverra sit amet interdum non, elementum sit amet arcu. Integer elementum blandit odio nec tincidunt. Cras consectetur feugiat ipsum id mollis. Phasellus id dolor turpis. Quisque condimentum lacus vitae dolor lobortis, vel pulvinar velit varius. "
         },
         {
@@ -32,7 +32,7 @@
             "name": "Genius",
             "price": 10,
             "stock": 5,
-            "img": "./FakeApi/Extras/mouse.png",
+            "img": "./Extras/mouse.png",
             "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum iaculis aliquet. Maecenas tortor turpis, mollis at vestibulum ut, fermentum ac metus. Proin vel mi non lacus iaculis condimentum in at quam. Praesent diam dui, viverra sit amet interdum non, elementum sit amet arcu. Integer elementum blandit odio nec tincidunt. Cras consectetur feugiat ipsum id mollis. Phasellus id dolor turpis. Quisque condimentum lacus vitae dolor lobortis, vel pulvinar velit varius. "
         },
         {
@@ -41,7 +41,7 @@
             "name": "Corsair",
             "price": 2000,
             "stock": 550,
-            "img": "./FakeApi/Extras/headphones.png",
+            "img": "./Extras/headphones.png",
             "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum iaculis aliquet. Maecenas tortor turpis, mollis at vestibulum ut, fermentum ac metus. Proin vel mi non lacus iaculis condimentum in at quam. Praesent diam dui, viverra sit amet interdum non, elementum sit amet arcu. Integer elementum blandit odio nec tincidunt. Cras consectetur feugiat ipsum id mollis. Phasellus id dolor turpis. Quisque condimentum lacus vitae dolor lobortis, vel pulvinar velit varius. "
         },
         {
@@ -50,7 +50,7 @@
             "name": "Desktop+Mouse+Screen+Keyboard",
             "price": 5000,
             "stock": 50,
-            "img": "./FakeApi/Extras/desktop.png",
+            "img": "./Extras/desktop.png",
             "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum iaculis aliquet. Maecenas tortor turpis, mollis at vestibulum ut, fermentum ac metus. Proin vel mi non lacus iaculis condimentum in at quam. Praesent diam dui, viverra sit amet interdum non, elementum sit amet arcu. Integer elementum blandit odio nec tincidunt. Cras consectetur feugiat ipsum id mollis. Phasellus id dolor turpis. Quisque condimentum lacus vitae dolor lobortis, vel pulvinar velit varius. "
         },
         {
@@ -59,7 +59,7 @@
             "name": "Corsair",
             "price": 6000,
             "stock": 150,
-            "img": "./FakeApi/Extras/notebook.png",
+            "img": "./Extras/notebook.png",
             "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum iaculis aliquet. Maecenas tortor turpis, mollis at vestibulum ut, fermentum ac metus. Proin vel mi non lacus iaculis condimentum in at quam. Praesent diam dui, viverra sit amet interdum non, elementum sit amet arcu. Integer elementum blandit odio nec tincidunt. Cras consectetur feugiat ipsum id mollis. Phasellus id dolor turpis. Quisque condimentum lacus vitae dolor lobortis, vel pulvinar velit varius. "
         }
 

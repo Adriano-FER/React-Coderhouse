@@ -3,9 +3,22 @@
     max-width: 60vh;
     
 }
-.card{
+.detail{
     align-items: center;
     background-color: transparent;
     opacity: 90%;
     color: thistle;
+}
+.cspinner{
+    size: 50px
+}
+.bg-3{
+    background-image: url("./nightcity.jpg");
+    
+    height: 100VH; 
+background-color: black;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
 }
