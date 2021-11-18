@@ -5,19 +5,27 @@ import { useProvider } from '../../contexts/ApiContext.js';
 import Spinner from 'react-bootstrap/Spinner'
 
 export default function ItemDetails({ details, number} ) {
-    console.log(details)
-    console.log(number.id)
-    const itemToShow = details.find(element => element.id == number.id);
-    
+
+    const itemToShow = details.find(element => element.id == number.id);  
+  
     // const {alias, description, id, img, name, price, stock } = itemToShow : "Loading";}
 
+    
+    let cart = useProvider()
+   
 
+    
+    function addCart(e) {
+        let id = e.target.getAttribute("data-item")
+        const itemToBuy= details.find(element => element.id == id);  
+        cart.setcurrentCart([... cart.currentCart, itemToBuy])
+        
+        console.log(cart)
 
-    console.log(itemToShow)
-    let kalo = useProvider()
-    function addCart(delta) {
-        kalo.setcurrentCart(delta)
     }
+
+ 
+
 
     return (
 
@@ -25,8 +33,8 @@ export default function ItemDetails({ details, number} ) {
 
         <div className="col-12">
             <span></span>
-            <button onClick={() => addCart("joystick")}>botonkalo</button>
-            <span>{kalo.currentCart}</span>
+          
+           
             {itemToShow ?
                 <div className="card detail" >
                     <img className="card-img-top" src={itemToShow.img} alt="Card image cap"></img>
@@ -37,11 +45,11 @@ export default function ItemDetails({ details, number} ) {
                         <span>{itemToShow.price} <br /></span>
                         <span>{itemToShow.description}  <br /></span>
 
-                        <button>Buy</button>
+                        
 
                     </div>
                     <span> </span>
-                    <ItemCount stock={itemToShow.stock} initial="0" onAdd="1" nombre={itemToShow.alias} />
+                    <ItemCount addCart={addCart} currentItem={itemToShow} stock={itemToShow.stock} initial="0" onAdd="1" nombre={itemToShow.alias} />
                 </div> 
                 :  <Spinner class="cspinner" animation="border" role="status">
                 <span className="visually-hidden">Loading...</span>

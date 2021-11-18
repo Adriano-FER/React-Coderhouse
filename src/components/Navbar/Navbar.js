@@ -15,7 +15,7 @@ const Navbar = () => {
             <li className="item"><NavLink to="/about">About</NavLink></li>
               <li className="item"><NavLink to="/contact">Contact</NavLink></li>
              <li className="brand">GamerForce <img className="logo" src={logo} alt="Logo"></img></li>
-            <li className="brand"> <CartWidget /></li>
+            <li className="brand"><NavLink to="/navbar"><CartWidget /></NavLink></li>
         </ul>
         </div>
     )

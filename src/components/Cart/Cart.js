@@ -1,25 +1,24 @@
-import { useProvider } from '../../contexts/ApiContext.js';
-import { useEffect } from 'react';
-export default function Cart(){
-    const itemListAccess = useProvider()
- 
-     
-function showStoredProducts(list){
+ import { useProvider } from '../../contexts/ApiContext.js';
+import { useState } from 'react';
 
-console.log(list)
+
+export default function Cart(){
+    const [ItemList, setItemList] = useState()
+    const cart = useProvider()
+
+     
+function showStoredProducts(){
+console.log(ItemList)
+ if(cart.currentCart.length === 0){return "Cart is Empty"}   
+else return cart.currentCart.map((item, index)=> <span>Item= {item.id} product={item} key={index} ammout={}</span>)
+
 
 }
 
-useEffect(() => {
-    showStoredProducts(itemListAccess.allProducts)
-    return () => {
-       
-    }
-}, [])
 
     return (
 <>
-        
+        {showStoredProducts()}
 </>
 
     )
