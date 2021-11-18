@@ -10,7 +10,8 @@ export default function Cart(){
 function showStoredProducts(){
 console.log(ItemList)
  if(cart.currentCart.length === 0){return "Cart is Empty"}   
-else return cart.currentCart.map((item, index)=> <span>Item= {item.id} product={item} key={index} ammout={}</span>)
+ 
+else return cart.currentCart.map((item, index)=> <span>Item= {item.id} Alias={item.alias} Marca={item.name}</span>)
 
 
 }
