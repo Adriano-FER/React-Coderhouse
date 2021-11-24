@@ -12,7 +12,7 @@ export const useProvider = () => useContext(ProviderContext)
 export const ApiProvider = ({ children }) => {
   const [currentCart, setcurrentCart] = useState([])
   const [allProducts, setallProducts] = useState([])
-
+  const [cartOpen, setcartOpen] = useState(false)
 useEffect(() => {
   console.log(currentCart)
   console.log(setcurrentCart)
@@ -22,7 +22,7 @@ useEffect(() => {
 }, [currentCart, setcurrentCart])
 
 return (
-  <ProviderContext.Provider value={{currentCart, setcurrentCart, allProducts, setallProducts}}>
+  <ProviderContext.Provider value={{currentCart, setcurrentCart, allProducts, setallProducts, setcartOpen}}>
     {children}
   </ProviderContext.Provider>
 
