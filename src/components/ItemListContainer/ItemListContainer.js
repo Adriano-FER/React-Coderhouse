@@ -3,45 +3,39 @@ import React from 'react';
 import './style.css';
 import ItemList from '../ItemList/ItemList.js';
 import { useEffect } from 'react';
-import { useProvider } from '../../contexts/ApiContext.js';
-
-
+import { getDocs, collection } from "firebase/firestore";
+import { getFirestore } from "../firebase/config"
+import { Container } from 'react-bootstrap';
 
 
 export default function ItemListContainer({title}) {
   const [products, setproducts] = useState([])
-  const itemListAccess = useProvider()
-  function storeItems(items){
-    itemListAccess.setallProducts(items)
-    }
-    
 
-  const getItems = async () => {  
- 
-      try {let rawresponse = await fetch("/products.json");
-      rawresponse = await rawresponse.json()
-          await setproducts(rawresponse.list) 
-          
-         
-      } catch (error) {
-          console.log(error)
-      }
-  }
-  useEffect(() => {
+  async function fetchData(){
+    const db = getFirestore();
+    const response = await getDocs(collection(db, "list"));
+    let responsedata = response.docs.map((doc) => doc.data())
+    let responseid = response.docs.map((doc) => doc.id)
+    responsedata.forEach((element , index) => {
+     element.id_firebase = responseid[index] 
+    });
+    console.log(responsedata)
+    setproducts(responsedata)
+   }
 
-          getItems();
-        storeItems(products)
-    }, []);
-
+useEffect(() => {
+fetchData()
+}, [])
   
       
 
   return (
-    <div className="App bg-a">
+    <Container className="App container-fluid no-padding bg-a"> 
+          <h2>{title}</h2>
         <ItemList items={products}/>
   
-      <p className="whitetxt">Welcome to {title}</p>
-    </div>
+
+    </Container>
   );
 }
 

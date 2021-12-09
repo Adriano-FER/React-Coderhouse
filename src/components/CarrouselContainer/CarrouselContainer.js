@@ -1,7 +1,7 @@
 import "./Carrousel.css";
 
 
-export default function Carrousel({}) {
+export default function Carrousel() {
 
 return (
 <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">

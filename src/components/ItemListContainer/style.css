@@ -1,14 +1,13 @@
-
+.whitetxt{
+    color: white;
+}
 .bg-a{
-    background-image: url("./wpaper.png");
-    
+    background-image: url("./wpaper.jpg");
+ 
         height: 100VH; 
     background-color: black;
-
+    background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-}
-.whitetxt{
-    color: white;
 }

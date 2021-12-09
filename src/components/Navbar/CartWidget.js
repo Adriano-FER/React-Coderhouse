@@ -8,11 +8,16 @@ const CartWidget = () => {
     
     let cartProv = useProvider()
     const getTotalItems = cartProv.currentCart.length
+    function showItems(){
+        if (getTotalItems > 0){
+            return getTotalItems
+        }
+    }
 
     return (
         <div>
             <button onClick={() => cartProv.setcartOpen(true)}>
-            <Badge badgeContent={getTotalItems} color="error">
+            <Badge badgeContent={showItems} color="error">
             <img className="smallimg" src={cart} alt="Cart"></img>
             </Badge>
             </button>

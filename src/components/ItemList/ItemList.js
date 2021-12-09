@@ -12,15 +12,13 @@ export default function ItemList({items}) {
 
 
   return (
-    <div className="App">
-        <p>funciono</p>
-        <div className="container">
+
+
             <div className="row">  
                 
-        {items.map((item , index) => ( <Item id={item.id} product={item} key={index}/>))}
+        {items.map((item , index) => ( <Item id_firebase={item.id_firebase} id={item.id} product={item} key={index}/>))}
              </div>
-        </div>
-    </div>
+
   );
 }
 

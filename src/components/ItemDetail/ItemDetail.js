@@ -1,48 +1,51 @@
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount.jsx";
 import { useProvider } from "../../contexts/ApiContext.js";
-import Spinner from "react-bootstrap/Spinner";
 
-export default function ItemDetails({ details, number }) {
-  const itemToShow = details.find((element) => element.id == number.id);
+export default function ItemDetails({ itemToShow }) {
+
+
 
   // const {alias, description, id, img, name, price, stock } = itemToShow : "Loading";}
 
   let cart = useProvider();
 
   function addCart(e) {
-    let id = e.target.getAttribute("data-item");
+  debugger
     let quantity = e.target.getAttribute("data-quantity");
+    quantity = Number(quantity);
+    const itemToBuy = itemToShow
+    itemToBuy.amount = quantity;
+    if (quantity <= 0){ return }
     debugger;
-    const itemToBuy = details.find((element) => element.id == id);
-  /*  if (cart.currentCart && cart.currentCart.test) {
-      cart.currentCart.test.forEach((element) => {
-        if (element.name === itemToBuy.name) {
-          element.quantity += quantity;
-          cart.setcurrentCart(...cart.currentCart, itemToBuy);
-      
-        return;
-      });  }
-    }*/
-
-    cart.setcurrentCart([...cart.currentCart, itemToBuy]);
-
+    let actualCart = [...cart.currentCart]
+    let foundItem = false
+    if (actualCart && itemToBuy) {
+      actualCart.forEach((element) => {
+        if (element.id === itemToBuy.id) {
+          element.amount += quantity;
+          foundItem = true
+          //encuentra si ya hay algo en el carrito, y le agrega cantidad.
+        }
+      });
+    }
+    if(!foundItem){
+      actualCart = [...actualCart, itemToBuy];
+    }
+    cart.setcurrentCart(actualCart);
     console.log(cart.currentCart);
   }
 
   return (
-    <div className="col-12">
-      <span></span>
-
-      {itemToShow ? (
+    <div className="col-12"> 
         <div className="card detail">
           <img
             className="card-img-top"
             src={itemToShow.img}
-            alt="Card image cap"
+            alt="item"
           ></img>
           <div className="card-body">
-            <h5 className="card-title"></h5>
+            <h5 className="card-title">{itemToShow.alias}</h5>
 
             <p className="card-text">{itemToShow.name} </p>
             <span>
@@ -52,21 +55,11 @@ export default function ItemDetails({ details, number }) {
               {itemToShow.description} <br />
             </span>
           </div>
-          <span> </span>
-          <ItemCount
-            addCart={addCart}
-            currentItem={itemToShow}
-      
-          />
+           <ItemCount addCart={addCart} currentItem={itemToShow} stock={itemToShow.stock}/>
+          
         </div>
-      ) : (
-        <Spinner class="cspinner" animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-      )}
     </div>
+
   );
 }
 
-/*
- */

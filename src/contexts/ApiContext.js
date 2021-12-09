@@ -14,8 +14,7 @@ export const ApiProvider = ({ children }) => {
   const [allProducts, setallProducts] = useState([])
   const [cartOpen, setcartOpen] = useState(false)
 useEffect(() => {
-  console.log(currentCart)
-  console.log(setcurrentCart)
+
   return () => {
     
   }
