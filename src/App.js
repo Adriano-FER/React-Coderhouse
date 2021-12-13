@@ -23,8 +23,11 @@ function App() {
     <Route exact path="/">
    <Home />
     </Route>
-      <Route exact path="/products">
-    <ItemListContainer title="Gaming Area" />
+      <Route exact path="/products/:category">
+    <ItemListContainer title="Custom Search" />
+    </Route>
+      <Route exact path="/products/">
+    <ItemListContainer title="Full Catalogue" />
     </Route>
     <Route path="/detail/:id">
     <ItemDetailContainer />

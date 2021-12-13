@@ -1,24 +1,29 @@
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount.jsx";
 import { useProvider } from "../../contexts/ApiContext.js";
+import { useState} from 'react';
 
 export default function ItemDetails({ itemToShow }) {
-
-
-
-  // const {alias, description, id, img, name, price, stock } = itemToShow : "Loading";}
-
+  const [showButton, setShowButton] = useState(false)
   let cart = useProvider();
-
   function addCart(e) {
-  debugger
+  setShowButton(true)
     let quantity = e.target.getAttribute("data-quantity");
     quantity = Number(quantity);
     const itemToBuy = itemToShow
     itemToBuy.amount = quantity;
-    if (quantity <= 0){ return }
-    debugger;
+    if (quantity <= 0){ return };
     let actualCart = [...cart.currentCart]
+    let mainCart = [...cart.allProducts]
+    mainCart.forEach((element) => {
+      if (element.id === itemToBuy.id){
+        element.stock -= quantity
+      }
+    
+    })
+    cart.setallProducts(actualCart);
+
+
     let foundItem = false
     if (actualCart && itemToBuy) {
       actualCart.forEach((element) => {
@@ -55,7 +60,7 @@ export default function ItemDetails({ itemToShow }) {
               {itemToShow.description} <br />
             </span>
           </div>
-           <ItemCount addCart={addCart} currentItem={itemToShow} stock={itemToShow.stock}/>
+           <ItemCount showButton={showButton}addCart={addCart} currentItem={itemToShow} stock={itemToShow.stock}/>
           
         </div>
     </div>

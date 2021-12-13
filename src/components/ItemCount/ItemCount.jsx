@@ -1,7 +1,7 @@
 import { useState, useEffect} from 'react';
-
-
-export default function ItemCount({ addCart, currentItem, stock}){
+import { NavLink } from 'react-router-dom';
+import "./ItemCount.css"
+export default function ItemCount({ addCart, currentItem, stock, showButton}){
   let nombre = currentItem.alias
     const [currentStock, setStock] = useState([])
     const [actualBuyQuantity, setBuyQuantity] = useState(0)
@@ -11,6 +11,9 @@ export default function ItemCount({ addCart, currentItem, stock}){
     setStock(stock)
 
   }, [stock])
+
+
+
 
     function buyFromStock() {
       if(currentStock !== 0 && currentStock >= AddValue){
@@ -41,9 +44,10 @@ export default function ItemCount({ addCart, currentItem, stock}){
        ></input>
      <p> stock: = {currentStock} </p>
      <p> MyCart = {actualBuyQuantity} </p>
-     <button onClick={buyFromStock}>Agregar</button>
-     <button onClick={deleteFromStock}>Restar</button>
-     <button data-quantity={actualBuyQuantity} data-item={id} onClick={addCart}>conformar compra </button> 
+     <button class="ICButton" onClick={buyFromStock}>Agregar</button>
+     <button class="ICButton" onClick={deleteFromStock}>Restar</button>
+     <button class="ICButton" data-quantity={actualBuyQuantity} data-item={id} onClick={addCart}>conformar compra </button> 
+     {showButton ? <div><NavLink to="/cart"><button class="myBuytton">Ir al carrito</button></NavLink></div> : null}
      </div>
       </div>
       )

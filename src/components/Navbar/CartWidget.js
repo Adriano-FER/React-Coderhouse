@@ -1,4 +1,3 @@
-import cart from './cart.jpg'; // with import
 import "./Cart.css"
 import { useProvider } from '../../contexts/ApiContext.js';
 import { Badge } from "react-bootstrap";
@@ -13,12 +12,12 @@ const CartWidget = () => {
             return getTotalItems
         }
     }
-
+//          <img className="smallimg" src={cart} alt="Cart"></img>
     return (
         <div>
-            <button onClick={() => cartProv.setcartOpen(true)}>
+            <button class="bg-btn" onClick={() => cartProv.setcartOpen(true)}>
             <Badge badgeContent={showItems} color="error">
-            <img className="smallimg" src={cart} alt="Cart"></img>
+  
             </Badge>
             </button>
         </div>

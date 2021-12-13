@@ -6,11 +6,14 @@ import { useEffect } from 'react';
 import { getDocs, collection } from "firebase/firestore";
 import { getFirestore } from "../firebase/config"
 import { Container } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
+import { useProvider } from '../../contexts/ApiContext.js';
 
 
 export default function ItemListContainer({title}) {
+  const cart = useProvider()
   const [products, setproducts] = useState([])
-
+  const {category} = useParams()
   async function fetchData(){
     const db = getFirestore();
     const response = await getDocs(collection(db, "list"));
@@ -21,6 +24,7 @@ export default function ItemListContainer({title}) {
     });
     console.log(responsedata)
     setproducts(responsedata)
+    cart.setallProducts(products)
    }
 
 useEffect(() => {
@@ -32,7 +36,7 @@ fetchData()
   return (
     <Container className="App container-fluid no-padding bg-a"> 
           <h2>{title}</h2>
-        <ItemList items={products}/>
+        <ItemList items={products} category={category}/>
   
 
     </Container>
