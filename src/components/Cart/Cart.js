@@ -25,6 +25,12 @@ export default function Cart(){
         }
 
     }
+    function clearCart(){
+        let emptyCart = []
+             cart.setcurrentCart(emptyCart)
+            return;
+
+    }
      
 function showStoredProducts(){
 
@@ -44,14 +50,15 @@ else return cart.currentCart.map((item, index)=>
  </ul>
  </container>
  )
-}
 
+
+}
 
     return (
 <>
         
         {showStoredProducts()}
-
+        {cart.currentCart.length !== 0 ? <button onClick={clearCart}>Limpiar Carrito</button> : []}
         
 </>
 
