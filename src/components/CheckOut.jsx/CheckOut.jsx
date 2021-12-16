@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useProvider } from '../../contexts/ApiContext.js';
 import BuyerForm from "./Form";
-import { NavLink } from "react-router-dom";
 import SendOrder from "./SendOrder"
 
 const CheckOut = () => {

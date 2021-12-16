@@ -6,12 +6,11 @@ import { doc, getDoc } from "firebase/firestore";
 import { getFirestore } from "../firebase/config"
 import { Spinner } from "react-bootstrap";
 
-export default function ItemDetailContainer({}) {
+export default function ItemDetailContainer() {
   const [products, setproducts] = useState([]);
   const ID = useParams()
-
-  useEffect(async () => {
-
+  useEffect(() => {
+    async function fetchData(){
     const db = getFirestore();
     const docRef = await doc(db, "list", ID.id)
     const customproduct = await getDoc(docRef)
@@ -23,7 +22,8 @@ export default function ItemDetailContainer({}) {
       console.log("No such document!");
     }
 
-  
+  }
+  fetchData()
   }, []);
   
   return (

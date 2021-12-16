@@ -14,7 +14,7 @@ const Navbar = () => {
             <li className="item"><NavLink to="/detail">Item Detail</NavLink></li>
              <li className="item"><NavLink to="/cart">Cart</NavLink></li>
             <li className="item"><NavLink to="/about">About</NavLink></li> 
-              <li className="item dropdown"><a class="dropbtn">Categorias</a>
+              <li className="item dropdown"><span class="dropbtn">Categorias</span>
               <div class="dropdown-content">
               <NavLink to="/products/PC">PC</NavLink>
               <NavLink to="/products/CONSOLE">CONSOLA</NavLink>
