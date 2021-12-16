@@ -1,5 +1,5 @@
  import { useProvider } from '../../contexts/ApiContext.js';
-
+import { NavLink } from 'react-router-dom';
 import "./Cart.css";
 
 export default function Cart(){
@@ -31,6 +31,7 @@ export default function Cart(){
             return;
 
     }
+
      
 function showStoredProducts(){
 
@@ -46,7 +47,7 @@ else return cart.currentCart.map((item, index)=>
  <strong>{item.alias}</strong> {item.name} 
  <span className="rightsp">amount: {item.amount}</span> 
  <button data-item={item.id} onClick={removeProduct}>Quitar Producto</button> </li>
- <button>Terminar Compra</button>
+
  </ul>
  </container>
  )
@@ -58,7 +59,12 @@ else return cart.currentCart.map((item, index)=>
 <>
         
         {showStoredProducts()}
-        {cart.currentCart.length !== 0 ? <button onClick={clearCart}>Limpiar Carrito</button> : []}
+        {cart.currentCart.length !== 0 ? 
+        <>
+        <button onClick={clearCart}>Limpiar Carrito</button>
+        <div><NavLink to="/form">Terminar compra</NavLink></div>
+        </>
+         : []}
         
 </>
 

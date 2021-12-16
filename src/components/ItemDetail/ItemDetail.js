@@ -14,14 +14,7 @@ export default function ItemDetails({ itemToShow }) {
     itemToBuy.amount = quantity;
     if (quantity <= 0){ return };
     let actualCart = [...cart.currentCart]
-    let mainCart = [...cart.allProducts]
-    mainCart.forEach((element) => {
-      if (element.id === itemToBuy.id){
-        element.stock -= quantity
-      }
-    
-    })
-    cart.setallProducts(actualCart);
+ 
 
 
     let foundItem = false
