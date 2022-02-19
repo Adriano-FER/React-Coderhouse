@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Redressed&family=Roboto+Serif:ital,wght@1,100&family=Shizuru&display=swap');
 .wt{
     color: white;
+}
+.h3{
+    font-family: 'Lato', sans-serif;
 }
 .bg-b{
     background-image: url("./abstract.jpg");
@@ -10,6 +14,7 @@ background-color: black;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border: solid;
 }  
 .bg-c{
     background-image: url("./computer.jpg");
@@ -20,5 +25,6 @@ background-color: black;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border: solid;
 }  
 

@@ -4,6 +4,7 @@
   text-align: center;
   color: white;
   font-size: 15px;
+  border: 2px black solid;
 }
 
 ul.topnav {
@@ -11,7 +12,8 @@ ul.topnav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background: rgb(66,26,113);
+    background: linear-gradient(90deg, rgba(66,26,113,1) 19%, rgba(9,9,111,1) 35%, rgba(9,18,127,1) 38%, rgba(96,11,11,1) 100%);
   }
   
 
