@@ -46,7 +46,7 @@ else return cart.currentCart.map((item, index)=>
  <li>{item.id}<img className="cartimg" src={item.img} alt="product"></img> 
  <strong>{item.alias}</strong> {item.name} 
  <span className="rightsp">amount: {item.amount}</span> 
- <button data-item={item.id} onClick={removeProduct}>Quitar Producto</button> </li>
+ <button className="ICButton" data-item={item.id} onClick={removeProduct}>Quitar Producto</button> </li>
 
  </ul>
  </container>
@@ -61,8 +61,8 @@ else return cart.currentCart.map((item, index)=>
         {showStoredProducts()}
         {cart.currentCart.length !== 0 ? 
         <>
-        <button onClick={clearCart}>Limpiar Carrito</button>
-        <div><NavLink to="/form">Terminar compra</NavLink></div>
+        <button className="ICButton" onClick={clearCart}>Limpiar Carrito</button>
+        <div><NavLink className="ICButton" to="/form">Terminar compra</NavLink></div>
         </>
          : []}
         

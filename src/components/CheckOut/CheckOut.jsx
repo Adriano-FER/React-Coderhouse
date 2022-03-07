@@ -3,6 +3,7 @@ import { useProvider } from '../../contexts/ApiContext.js';
 import BuyerForm from "./Form";
 import SendOrder from "./SendOrder"
 
+
 const CheckOut = () => {
     const cart = useProvider()
     const product = cart.currentCart
@@ -30,19 +31,25 @@ const CheckOut = () => {
     }
 
 return (
-<div>
-    <form onSubmit={handleSubmit}>
-       <label>Inserta aquí tu nombre y apellido</label> 
-        <BuyerForm setBuyer={setBuyer} name="name" buyer={buyer}/>
-        <label>Inserta tu Email</label> 
-        <BuyerForm setBuyer={setBuyer} name="email" buyer={buyer}/>
-        <label>Inserta tu número de telefono</label> 
-        <BuyerForm setBuyer={setBuyer} name="phone" buyer={buyer}/>
-        <button type="submit">
-            Finalizar Compra
-        </button>
-    </form>
-</div>
+
+<container>
+    <div className="row">
+  
+        <div className="col-4 offset-4 bg-light align-self-center .ml-auto">
+            <form onSubmit={handleSubmit}>
+               <label>Inserta aquí tu nombre y apellido</label> 
+                <BuyerForm setBuyer={setBuyer} name="name" buyer={buyer}/>
+                <label>Inserta tu Email</label> 
+                <BuyerForm setBuyer={setBuyer} name="email" buyer={buyer}/>
+                <label>Inserta tu número de telefono</label> 
+                <BuyerForm setBuyer={setBuyer} name="phone" buyer={buyer}/>
+                <button type="submit">
+                    Finalizar Compra
+                </button>
+            </form>
+        </div>
+    </div>
+</container>
 )
 
 }

@@ -8,12 +8,13 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     return (
         <div>
-            <ul className="topnav">
+            <ul className="topnav ">
              <li className="item"><NavLink to="/">Home</NavLink></li>
             <li className="item"><NavLink to="/products">Products</NavLink></li>
             <li className="item"><NavLink to="/detail">Item Detail</NavLink></li>
              <li className="item"><NavLink to="/cart">Cart</NavLink></li>
             <li className="item"><NavLink to="/about">About</NavLink></li> 
+            
               <li className="item dropdown ">
                   <span class="dropbtn">Categorias</span>
               <div class="dropdown-content">

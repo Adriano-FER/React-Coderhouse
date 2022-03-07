@@ -7,7 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Home from "./components/Home/Home";
 import { ApiProvider } from "./contexts/ApiContext";
 import Cart from "./components/Cart/Cart"
-import CheckOut from "./components/CheckOut.jsx/CheckOut";
+import CheckOut from "./components/CheckOut/CheckOut";
 
 
 function App() {
